@@ -9,7 +9,7 @@ const NotFound = () => {
       <p className='normal-text'>Sorry the page you're looking for doesn't exist or has been moved.</p>
       <div className="flex-1">
           <Link to='/' className='home-btn'>
-            Take me home
+            Go back
           </Link>
           
       </div>

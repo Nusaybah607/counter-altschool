@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-*, ::after, ::before{
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,24 +14,39 @@
   --error-clr: #5925dc;
   --transition-primary: all 0.2s ease-in;
 }
-a{
+a {
   text-decoration: none;
 }
 body {
-  font-family: inter, 'sans-serif';
+  font-family: inter, "sans-serif";
 }
-.main{
+.menu {
+  background-color: transparent;
+  border: none;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  width: 3rem;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+.menu svg {
+  font-size: 5rem;
+}
+.main {
   display: grid;
   place-items: center;
-  min-height: 100vh;
-  padding: 0 1rem;
+  padding: 3rem 1rem;
 }
 .container {
   border: 2px solid var(--black);
+  margin-top: 2rem;
+  padding: 1rem;
 }
 .container h1 {
   font-size: 2.5rem;
   text-align: center;
+  padding: 2rem 0;
 }
 .value {
   text-align: center;
@@ -39,25 +56,46 @@ body {
   display: block;
   margin: 1rem auto;
   border: 2px solid black;
-  border-radius:5px ;
+  border-radius: 5px;
 }
-::-webkit-inner-spin-button{
+::-webkit-inner-spin-button {
   display: none;
 }
-
+.navbar {
+  position: fixed;
+  inset: 0;
+  width: 65%;
+  height: 100%;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(90deg, rgba(255, 0, 0, 0.315), rgba(0, 0, 255, 0.288));
+}
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 10rem 3rem;
+}
+.nav-container a {
+  font-size: 1.2rem;
+  color: black;
+}
+.show-sidebar {
+  transform: translateX(0);
+}
 .count-btns button {
   background-color: transparent;
   padding: 0.5rem 1.2rem;
   margin: 1rem;
   border-radius: 5px;
-  font-family: inter, 'sans-serif';
+  font-family: inter, "sans-serif";
   text-transform: capitalize;
   font-size: 1rem;
   font-weight: 600;
   border: 2px solid black;
-
   cursor: pointer;
-  transition:all 0.2s linear ;
+  transition: all 0.2s linear;
 }
 .count-btns button:hover {
   background-color: black;
@@ -66,9 +104,8 @@ body {
 .error-page {
   padding: 5rem 1.5rem 0;
 }
-.height{
+.height {
   min-height: 60vh;
-  
 }
 .error404 {
   color: var(--error-clr);
@@ -110,9 +147,6 @@ body {
   color: var(--black);
 }
 .nav-btn {
-  position: absolute;
-  top: 100px;
- /* left: 0; */
   padding: 0.7rem 1rem;
   text-align: center;
   border-radius: 10px;
@@ -126,19 +160,43 @@ body {
 .reducer {
   background-color: steelblue;
 }
+.error-boundary {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.error-boundary h3 {
+  padding-bottom: 2rem;
+}
+.error-boundary_content p {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+}
+.error-boundary_content button {
+padding: 10px;
+background-color: white;
+border-radius: 4px;
+width: 150px;
+margin-top: 2rem;
+font-size: 1rem;
+text-transform: capitalize;
+cursor: pointer;
+}
 @media screen and (min-width: 768px) {
-  .error-page{
+  .navbar {
+    width: 30%;
+  }
+  .error-page {
     padding: 5rem 10rem;
   }
-  .home-btn{
+  .home-btn {
     display: inline-block;
   }
-  .back-btn{
+  .back-btn {
     display: inline-block;
     margin-left: 2rem;
     text-align: center;
   }
-  .flex-1{
+  .flex-1 {
     display: flex;
     flex-direction: reverse;
     gap: 1rem;
